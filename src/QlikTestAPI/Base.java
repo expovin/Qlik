@@ -84,9 +84,6 @@ public class Base {
 	        FileInputStream instream = new FileInputStream(new File("E://temp//SenseAPI//APIserver2.jks"));
 	        keyStore.load(instream, "qlik123".toCharArray()); 
 	        
-//	        X509Certificate cert = (X509Certificate)keyStore.getCertificate("QlikClient");
-//	        System.out.println(cert);
-//	        keyStore.setCertificateEntry("QlikClient", cert);
 
 	        instream.close();			
             KeyManagerFactory keyManagerFactory = KeyManagerFactory.getInstance("SunX509");
@@ -108,9 +105,6 @@ public class Base {
         String body = "{'UserDirectory':'" + userdirectory + "', 'UserId':'" + user + "','Attributes': []}";
         byte[] bodyBytes = body.getBytes("UTF-8");
 
-        //        String userpass = user + ":" + "ZAQ!2wsx";
-//        String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes());      
-//        request.setRequestProperty("Authorization", basicAuth);
 
               
         int responseCode = request.getResponseCode();
